@@ -1,0 +1,35 @@
+body {
+   background-color: rgb(213, 245,235);
+   color : blueviolet;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hargafinal {
+    font-weight: bold;
+    color:brown;
+}
+
+a:link {
+    text-decoration: none;
+    color:rgb(122, 227, 17);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color:blue;
+    font-weight: 550;
+}
+.profilepicture {
+    border-radius: 50%;
+}
+
+.photoframe {
+  border:2px solid gray;/*tebal jenis warna*/
+  padding: 16px; /*jarak isi dengan border */
+  width:510px; /*jika tidk di set akan full 1 halaman*/
+  border-image: url(border.png) 30 round
+}
