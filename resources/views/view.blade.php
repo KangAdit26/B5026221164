@@ -5,19 +5,21 @@
 @section('konten')
     <h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
     <h3>View Pegawai</h3>
-
     <a class="btn btn-primary" href="/pegawai">Kembali</a>
 
     <br />
     <br />
 
+    <h3 class="text-center">Data Pegawai</h3>
+    <br />
+     <br />
+
     <div class="row">
         <div class="col-1"></div>
         <div class="col-3">
             <div class="card" style="width:200px">
-                <img src="{{ asset('images/bg_02.png') }}">
+                <img src="{{ asset('images/pegawai.png') }}">
                 <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
                     <a href="#" class="btn btn-warning">See Profile</a>
                 </div>
             </div>
