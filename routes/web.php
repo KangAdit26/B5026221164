@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NilaikuliahController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,7 +56,7 @@ Route::get('showjam/{jam}', 'App\Http\Controllers\DosenController@showjam') ;
 Route::get('/formulir', 'App\Http\Controllers\DosenController@formulir');
 Route::post('/formulir/proses', 'App\Http\Controllers\DosenController@proses');
 
-//route CRUD
+//route CRUD PEGAWAI
 Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
 Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiController@tambah');
 Route::post('/pegawai/store','App\Http\Controllers\PegawaiController@store');
@@ -65,3 +66,19 @@ Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
 
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
+
+//route CRUD nilai kuliah
+Route::get('nilaikuliah','App\Http\Controllers\NilaikuliahController@index2');
+Route::get('nilaikuliah/tambah2','App\Http\Controllers\NilaikuliahController@tambah2');
+Route::post('nilaikuliah/store','App\Http\Controllers\NilaikuliahController@store');
+
+//route CRUD nilai kuliah
+Route::get('flashdisk','App\Http\Controllers\FlashdiskController@index3');
+Route::get('flashdisk/tambah3','App\Http\Controllers\FlashdiskController@tambah3');
+Route::post('flashdisk/store','App\Http\Controllers\FlashdiskController@store');
+Route::get('flashdisk/edit','App\Http\Controllers\FlashdiskController@edit');
+Route::get('flashdisk/edit2/{id}','App\Http\Controllers\FlashdiskController@edit2');
+Route::get('flashdisk/hapus/{id}','App\Http\Controllers\FlashdiskController@hapus');
+Route::post('/flashdisk/update','App\Http\Controllers\FlashdiskController@update');
+Route::get('/flashdisk/cari2','App\Http\Controllers\FlashdiskController@cari2');
+Route::get('/flashdisk/view2/{id}','App\Http\Controllers\FlashdiskController@view2');

@@ -9,63 +9,45 @@
 
     <br />
     <br />
-
-    <h3 class="text-center">Data Pegawai</h3>
-    <br />
-     <br />
-
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-3">
-            <div class="card" style="width:200px">
-                <img src="{{ asset('images/pegawai.png') }}">
-                <div class="card-body">
-                    <a href="#" class="btn btn-warning">See Profile</a>
+<h1 style="text-align: center;">Data pegawai</h1>
+   @foreach($pegawai as $p)
+    <form action="/pegawai/update" method="post">
+        {{ csrf_field() }}
+        <input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
+        <div class="form-group" style="padding-top: 20px; padding-bottom: 20px;">
+            <div class="card mb-8" style="max-width: 100%; padding: 20px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group" style="border: 1px solid #ccc; padding: 40%;">
+                            <img src="..." class="" alt="..." style="width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="padding-bottom: 10px;"><label for="nama" class="col-xs-3 col-form-label mr-2">Nama :</label></td>
+                                <td style="padding-bottom: 10px #ccc;><div class="form-control">{{ $p->pegawai_nama }}</div></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 10px ;"><label for="jabatan" class="col-xs-3 col-form-label mr-2">Jabatan :</label></td>
+                                <td style="padding-bottom: 10px #ccc;><div class="form-control">{{ $p->pegawai_jabatan }}</div></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 10px;"><label for="umur" class="col-xs-3 col-form-label mr-2">Umur :</label></td>
+                                <td style="padding-bottom: 10px #ccc;><div class="form-control">{{ $p->pegawai_umur }}</div></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 10px;"><label for="alamat" class="col-xs-3 col-form-label mr-2">Alamat :</label></td>
+                                <td style="padding-bottom: 10px #ccc;><div class="form-control">{{ $p->pegawai_alamat }}</div></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <a href="/pegawai" class="btn btn-success"> OK</a>
+                        <br>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-8">
-            @foreach ($pegawai as $p)
-                <fieldset disabled>
-                    <form action="/pegawai/update" method="post" class="form-horizontal" role="form">
-                        {{ csrf_field() }}
-                        <input type="hidden" name="id" value="{{ $p->pegawai_id }}">
-                        <div class = "form-group">
-                            <label for = "nama" class = "col-sm-2 control-label">Nama</label>
-                            <div class = "col-sm-10">
-                                <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"
-                                    class="form-control">
-                            </div>
-                        </div>
-                        <div class = "form-group">
-                            <label for = "jabatan" class = "col-sm-2 control-label">Jabatan</label>
-                            <div class = "col-sm-10">
-                                <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"
-                                    class="form-control">
-                            </div>
-                        </div>
-                        <div class = "form-group">
-                            <label for = "umur" class = "col-sm-2 control-label">Umur</label>
-                            <div class = "col-sm-10">
-                                <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"
-                                    class="form-control">
-                            </div>
-                        </div>
-                        <div class = "form-group">
-                            <label for = "alamat" class = "col-sm-2 control-label">Alamat</label>
-                            <div class = "col-sm-10">
-                                <textarea required="required" name="alamat" class="form-control">{{ $p->pegawai_alamat }}</textarea>
-                            </div>
-                        </div>
-                    </form>
-                </fieldset>
-            @endforeach
-            <div class="row">
-                <div class="col-10 text-center">
-                    <a href="/pegawai" class="btn btn-success w-25 p-2">Ok</a>
-                </div>
-                <div class="col-2"></div>
-            </div>
-        </div>
-    </div>
+    </form>
+    @endforeach
 @endsection
