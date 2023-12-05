@@ -82,3 +82,9 @@ Route::get('flashdisk/hapus/{id}','App\Http\Controllers\FlashdiskController@hapu
 Route::post('/flashdisk/update','App\Http\Controllers\FlashdiskController@update');
 Route::get('/flashdisk/cari2','App\Http\Controllers\FlashdiskController@cari2');
 Route::get('/flashdisk/view2/{id}','App\Http\Controllers\FlashdiskController@view2');
+
+//route CRUD Keranjang Belanja
+Route::get('keranjangbelanja','App\Http\Controllers\KeranjangbelanjaController@index4');
+Route::get('keranjangbelanja/tambah4','App\Http\Controllers\KeranjangbelanjaController@tambah4');
+Route::get('keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangbelanjaController@hapus');
+Route::post('keranjangbelanja/store','App\Http\Controllers\KeranjangbelanjaController@store');
