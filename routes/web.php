@@ -88,3 +88,8 @@ Route::get('keranjangbelanja','App\Http\Controllers\KeranjangbelanjaController@i
 Route::get('keranjangbelanja/tambah4','App\Http\Controllers\KeranjangbelanjaController@tambah4');
 Route::get('keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangbelanjaController@hapus');
 Route::post('keranjangbelanja/store','App\Http\Controllers\KeranjangbelanjaController@store');
+
+//route CRUD EAS
+Route::get('kategori','App\Http\Controllers\KategoriController@index5');
+Route::post('kategori/pilih','App\Http\Controllers\KategoriController@pilih');
+

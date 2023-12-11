@@ -6,7 +6,7 @@
 	<h2>www.malasngoding.com</h2>
 	<h3>Keranjang Belanja</h3>
  
-	<a href="/keranjangbelanja/tambah4" class="btn btn-success"> + BELI</a>
+	<a href="/keranjangbelanja/tambah4" class="btn btn-success"> $BELI</a>
 	
 	<br/>
 	
